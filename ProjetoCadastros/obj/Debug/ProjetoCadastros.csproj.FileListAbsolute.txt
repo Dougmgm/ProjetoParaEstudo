@@ -1,0 +1,17 @@
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\bin\Debug\ProjetoCadastros.exe.config
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\bin\Debug\ProjetoCadastros.exe
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\bin\Debug\ProjetoCadastros.pdb
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\App.g.cs
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros_MarkupCompile.cache
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros_MarkupCompile.lref
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.g.resources
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.Properties.Resources.resources
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.csproj.GenerateResource.cache
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.csproj.CoreCompileInputs.cache
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.exe
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.pdb
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\Interface\TelaPessoa.g.cs
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\ProjetoCadastros.csprojAssemblyReference.cache
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\Interface\TelaPessoa.baml
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\Interface\TelaPrincipal.g.cs
+C:\Users\douglas.menchon\source\repos\Projeto\ProjetoParaEstudo\ProjetoCadastros\obj\Debug\Interface\TelaPrincipal.baml
