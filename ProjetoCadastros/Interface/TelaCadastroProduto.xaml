@@ -1,0 +1,93 @@
+﻿<Window x:Class="ProjetoCadastros.Interface.TelaCadastroProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoCadastros.Interface"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner"
+        Title="Cadastrar Produto" Height="350" Width="610">
+    <Grid Margin="10">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Orientation="Horizontal" 
+                    Grid.ColumnSpan="6"
+                    HorizontalAlignment="Stretch">
+            
+            <StackPanel Grid.Column="0" 
+                        HorizontalAlignment="Left"
+                        Margin="0, 0, 10, 0">
+
+                <Label>Id:</Label>
+
+                <TextBox Background="#e8edea"
+                        Width="30"
+                        Height="20"
+                        IsReadOnly="True"/>
+            </StackPanel>
+
+            <StackPanel Width="500" VerticalAlignment="Stretch">
+
+                <Label>Nome:</Label>
+
+                <TextBox HorizontalAlignment="Stretch"                                          
+                         Text="{Binding DadosProduto.NomeProduto}"
+                         CharacterCasing="Upper"
+                         VerticalAlignment="Stretch"
+                     />
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" 
+                    Grid.Row="1"
+                    Margin="0,0,5,0">
+
+            <Label HorizontalAlignment="Left">Código:</Label>
+
+            <TextBox Height="20"                     
+                     HorizontalAlignment="Stretch"          
+                     Text="{Binding DadosProduto.Codigo}"
+                     />
+        </StackPanel>
+
+        <StackPanel Grid.ColumnSpan="1"
+                    Grid.Column="1"
+                    Grid.Row="1">
+
+            <Label>Valor:</Label>
+
+            <TextBox Height="20"
+                     HorizontalAlignment="Stretch"                     
+                     Text="{Binding DadosProduto.Valor}"
+                     CharacterCasing="Upper"
+                     />
+        </StackPanel>
+
+       
+
+        <Button Content="Fazer cadastro" 
+                Width="95"
+                Height="40"
+                Grid.Column="5"
+                Grid.Row="5"                
+                Command="{Binding [CadastrarProduto]}" />
+    </Grid>
+</Window>

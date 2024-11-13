@@ -59,19 +59,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Comuns\Comandos.cs" />
+    <Compile Include="Comuns\RelayCommand.cs" />
     <Compile Include="Enum\Status.cs" />
     <Compile Include="Enum\TipoPagamentoEnum.cs" />
+    <Compile Include="Interface\TelaCadastroProduto.xaml.cs">
+      <DependentUpon>TelaCadastroProduto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\TelaPrincipal.xaml.cs">
       <DependentUpon>TelaPrincipal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\ViewModel\TelaPessoaViewModel.cs" />
-    <Compile Include="RegraDeNegocio\PedidoDto.cs" />
-    <Compile Include="RegraDeNegocio\PessoaDto.cs" />
-    <Compile Include="RegraDeNegocio\ProdutoDto.cs" />
+    <Compile Include="Interface\ViewModel\TelaCadastroPessoaViewModel.cs" />
+    <Compile Include="Interface\ViewModel\TelaCadastroProdutoViewModel.cs" />
+    <Compile Include="Interface\ViewModel\TelaPrincipalViewModel.cs" />
+    <Compile Include="Interface\ViewModel\ViewModelBase.cs" />
+    <Compile Include="RegraDeNegocio\Dto\PedidoDto.cs" />
+    <Compile Include="RegraDeNegocio\Dto\PessoaDto.cs" />
+    <Compile Include="RegraDeNegocio\Dto\ProdutoDto.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface\TelaPessoa.xaml.cs">
-      <DependentUpon>TelaPessoa.xaml</DependentUpon>
+    <Compile Include="Interface\TelaCadastroPessoa.xaml.cs">
+      <DependentUpon>TelaCadastroPessoa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -98,9 +106,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Page Include="Interface\TelaPessoa.xaml">
+    <Folder Include="RegraDeNegocio\Consulta\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Interface\TelaCadastroPessoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\TelaCadastroProduto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

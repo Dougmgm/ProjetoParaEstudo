@@ -5,8 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoCadastros.Interface"
         mc:Ignorable="d"
-        Title="TelaPrincipal" Height="450" Width="800">
+        WindowStartupLocation="CenterOwner"
+        Title="Bem vindo" Height="450" Width="800">
+    
     <Grid>
-        
+        <TabControl>
+            <TabItem Header="Clientes">
+                <DataGrid ItemsSource="{Binding Path=ListaPessoas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserReorderColumns="True" 
+                          CanUserResizeColumns="True" 
+                          CanUserResizeRows="False" 
+                          CanUserSortColumns="True" 
+                          HorizontalGridLinesBrush="Transparent" 
+                          VerticalGridLinesBrush="Transparent" 
+                          AlternatingRowBackground="WhiteSmoke">
+                    
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id"
+                                            IsReadOnly="True"
+                                            Binding="{Binding IdPessoa}" />
+                        <DataGridTextColumn Header="Nome"
+                                            IsReadOnly="True"
+                                            Binding="{Binding NomePessoa}" />
+                        <DataGridTextColumn Header="CPF"
+                                            IsReadOnly="True"
+                                            Binding="{Binding Cpf}" />
+                        <DataGridTextColumn Header="Endereço"
+                                            IsReadOnly="True"
+                                            Binding="{Binding Endereco}"
+                                            Width="500"/>
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="Produtos">
+                <DataGrid ItemsSource="{Binding Path=ListaProdutos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserReorderColumns="True" 
+                          CanUserResizeColumns="True" 
+                          CanUserResizeRows="False" 
+                          CanUserSortColumns="True" 
+                          HorizontalGridLinesBrush="Transparent" 
+                          VerticalGridLinesBrush="Transparent" 
+                          AlternatingRowBackground="WhiteSmoke">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding IdProduto}" />
+                        <DataGridTextColumn Header="Nome"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding NomeProduto}" />
+                        <DataGridTextColumn Header="Código"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding Codigo}" />
+                        <DataGridTextColumn Header="Valor"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding Valor}" />
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            
+            <TabItem Header="Pedidos">
+                <DataGrid ItemsSource="{Binding Path=ListaPedidos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserReorderColumns="True" 
+                          CanUserResizeColumns="True" 
+                          CanUserResizeRows="False" 
+                          CanUserSortColumns="True" 
+                          HorizontalGridLinesBrush="Transparent" 
+                          VerticalGridLinesBrush="Transparent" 
+                          AlternatingRowBackground="WhiteSmoke">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding IdPessoa}" />
+                        <DataGridTextColumn Header="Nome"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding NomePessoa}" />
+                        <DataGridTextColumn Header="CPF"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding Cpf}" />
+                        <DataGridTextColumn Header="Endereço"
+                                                    IsReadOnly="True"
+                                                    Binding="{Binding Endereco}" />
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

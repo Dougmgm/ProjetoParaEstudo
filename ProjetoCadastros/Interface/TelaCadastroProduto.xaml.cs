@@ -4,14 +4,14 @@ using System.Windows;
 namespace ProjetoCadastros.Interface
 {
     /// <summary>
-    /// Interaction logic for TelaPrincipal.xaml
+    /// Lógica interna para TelaCadastroProduto.xaml
     /// </summary>
-    public partial class TelaPrincipal : Window
+    public partial class TelaCadastroProduto : Window
     {
-        public TelaPrincipal()
+        public TelaCadastroProduto()
         {
             InitializeComponent();
-            DataContext = new TelaPrincipalViewModel();
+            DataContext = new TelaCadastroProdutoViewModel();
         }
     }
 }
