@@ -9,38 +9,64 @@
         Title="Bem vindo" Height="450" Width="800">
     
     <Grid>
-        <TabControl>
+        
+
+        <TabControl Grid.ColumnSpan="2">
             <TabItem Header="Clientes">
-                <DataGrid ItemsSource="{Binding Path=ListaPessoas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                          AutoGenerateColumns="False"
-                          CanUserAddRows="False" 
-                          CanUserDeleteRows="False" 
-                          CanUserReorderColumns="True" 
-                          CanUserResizeColumns="True" 
-                          CanUserResizeRows="False" 
-                          CanUserSortColumns="True" 
-                          HorizontalGridLinesBrush="Transparent" 
-                          VerticalGridLinesBrush="Transparent" 
-                          AlternatingRowBackground="WhiteSmoke">
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                     
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id"
-                                            IsReadOnly="True"
-                                            Binding="{Binding IdPessoa}" />
-                        <DataGridTextColumn Header="Nome"
-                                            IsReadOnly="True"
-                                            Binding="{Binding NomePessoa}" />
-                        <DataGridTextColumn Header="CPF"
-                                            IsReadOnly="True"
-                                            Binding="{Binding Cpf}" />
-                        <DataGridTextColumn Header="Endereço"
-                                            IsReadOnly="True"
-                                            Binding="{Binding Endereco}"
-                                            Width="500"/>
+                    <DataGrid ItemsSource="{Binding Path=ListaPessoas, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"                               
+                              Grid.ColumnSpan="2"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False" 
+                              CanUserDeleteRows="False" 
+                              CanUserReorderColumns="True" 
+                              CanUserResizeColumns="True" 
+                              CanUserResizeRows="False" 
+                              CanUserSortColumns="True" 
+                              HorizontalGridLinesBrush="Transparent" 
+                              VerticalGridLinesBrush="Transparent" 
+                              AlternatingRowBackground="WhiteSmoke">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id"
+                                                IsReadOnly="True"
+                                                Binding="{Binding IdPessoa}" />
+                            <DataGridTextColumn Header="Nome"
+                                                IsReadOnly="True"
+                                                Binding="{Binding NomePessoa}" />
+                            <DataGridTextColumn Header="CPF"
+                                                IsReadOnly="True"
+                                                Binding="{Binding Cpf}" />
+                            <DataGridTextColumn Header="Endereço"
+                                                IsReadOnly="True"
+                                                Binding="{Binding Endereco}"
+                                                Width="500"/>
 
 
-                    </DataGrid.Columns>
-                </DataGrid>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Grid.Column="2"
+                            Grid.Row="2"
+                            Content="Cadatrar cliente"
+                            Height="50"
+                            Width="100"
+                            Command="{Binding [CadastrarNovaPessoa]}" >
+                        
+                    </Button>
+                </Grid>
+                
             </TabItem>
 
             <TabItem Header="Produtos">
@@ -74,7 +100,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </TabItem>
-            
+
             <TabItem Header="Pedidos">
                 <DataGrid ItemsSource="{Binding Path=ListaPedidos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                           AutoGenerateColumns="False"

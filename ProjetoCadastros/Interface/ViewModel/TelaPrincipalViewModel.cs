@@ -1,8 +1,6 @@
 ﻿using ProjetoCadastros.Comuns;
 using ProjetoCadastros.RegraDeNegocio;
-using System;
 using System.Collections.Generic;
-using System.Windows;
 using System.Windows.Input;
 
 namespace ProjetoCadastros.Interface.ViewModel
@@ -25,14 +23,14 @@ namespace ProjetoCadastros.Interface.ViewModel
         
         private void CriarComandos()
         {
-            _comandos["CadastrarProduto"] = new RelayCommand(x => CadastrarProduto());
+            _comandos["CadastrarNovaPessoa"] = new RelayCommand(x => CadastrarNovaPessoa());
         }
 
         private void CarregarDados()
         {
             ListaPessoas = ObterListaPessoas();
             ListaProdutos = ObterListaProdutos();
-            //DadosPedidos =
+            //ListaPedidos = ObterListaPedidos();
         }
 
         public List<PessoaDto> ObterListaPessoas()
@@ -139,9 +137,11 @@ namespace ProjetoCadastros.Interface.ViewModel
         };
         }
 
-        private void CadastrarProduto()
-        {
-            throw new NotImplementedException();
+        private void CadastrarNovaPessoa()
+        {            
+            var formCadastrarPessoa = new TelaCadastroPessoa();
+
+            formCadastrarPessoa.ShowDialog();
         }        
     }
 }
