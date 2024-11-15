@@ -7,10 +7,6 @@ namespace ProjetoCadastros.Interface.ViewModel
 {
     public class TelaPrincipalViewModel : ViewModelBase
     {
-        private readonly Dictionary<string, ICommand> _comandos = new Dictionary<string, ICommand>();
-
-        public ICommand this[string commandName] => _comandos.ContainsKey(commandName) ? _comandos[commandName] : null;
-
         public List<PessoaDto> ListaPessoas { get; set; }
         public List<ProdutoDto> ListaProdutos { get; set; }
         public List<PedidoDto> ListaPedidos { get; set; }

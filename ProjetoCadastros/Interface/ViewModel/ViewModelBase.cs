@@ -10,6 +10,10 @@ namespace ProjetoCadastros.Interface.ViewModel
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
+        public readonly Dictionary<string, ICommand> _comandos = new Dictionary<string, ICommand>();
+
+        public ICommand this[string commandName] => _comandos.ContainsKey(commandName) ? _comandos[commandName] : null;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)

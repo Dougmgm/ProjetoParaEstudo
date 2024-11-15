@@ -8,9 +8,6 @@ namespace ProjetoCadastros.Interface.ViewModel
 {
     public class TelaCadastroProdutoViewModel : ViewModelBase
     {
-        private readonly Dictionary<string, ICommand> _comandos = new Dictionary<string, ICommand>();
-        public ICommand this[string commandName] => _comandos.ContainsKey(commandName) ? _comandos[commandName] : null;
-
         public TelaCadastroProdutoViewModel()
         {
             DadosProduto = new ProdutoDto();

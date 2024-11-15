@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoCadastros.Interface"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterOwner"
+        WindowStartupLocation="CenterScreen"
         Title="Cadastro cliente" Height="350" Width="600">
     
     <Grid Margin="10">
@@ -50,29 +50,34 @@
 
         <StackPanel Grid.Column="0" 
                     Grid.Row="1"
-                    Margin="0,0,5,0">
-            
-            <Label>CEP:</Label>
-            
-            <TextBox Height="20"                     
-                     HorizontalAlignment="Stretch"          
-                     Text="{Binding DadosPessoa.Cep}"
-                     />
-        </StackPanel>
+                    Orientation="Horizontal"
+                    Grid.ColumnSpan="6">
+            <StackPanel Margin="0,0,5,0">
 
-        <StackPanel Grid.ColumnSpan="5"
-                    Grid.Column="1"
-                    Grid.Row="1">
-            
-            <Label>Endereço:</Label>
-            
-            <TextBox Height="20"
-                     HorizontalAlignment="Stretch"
-                     Text="{Binding DadosPessoa.Rua}"
-                     CharacterCasing="Upper"
-                     />
-        </StackPanel>
+                <Label>CEP:</Label>
 
+                <TextBox Height="20"                     
+                         HorizontalAlignment="Stretch"          
+                         Text="{Binding DadosPessoa.Cep}"
+                         Width="65"                         
+                         />
+            </StackPanel>
+
+            <StackPanel Grid.ColumnSpan="5"
+                        Grid.Column="1"
+                        Grid.Row="1">
+
+                <Label>Endereço:</Label>
+
+                <TextBox Height="20"
+                         HorizontalAlignment="Stretch"
+                         Text="{Binding DadosPessoa.Rua}"
+                         CharacterCasing="Upper"
+                         Width="510"
+                         />
+            </StackPanel>
+        </StackPanel>
+                
         <StackPanel Grid.Column="0" 
                     Grid.Row="2" 
                     HorizontalAlignment="Stretch"
