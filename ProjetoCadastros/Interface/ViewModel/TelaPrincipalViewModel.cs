@@ -1,5 +1,6 @@
 ﻿using ProjetoCadastros.Comuns;
 using ProjetoCadastros.RegraDeNegocio;
+using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 
@@ -20,6 +21,13 @@ namespace ProjetoCadastros.Interface.ViewModel
         private void CriarComandos()
         {
             _comandos["CadastrarNovaPessoa"] = new RelayCommand(x => CadastrarNovaPessoa());
+            _comandos["CadastrarNovoProduto"] = new RelayCommand(x => CadastrarNovoProduto());
+            _comandos["CadastrarNovoPedido"] = new RelayCommand(x => CadastrarNovoPedido());
+        }
+
+        private void CadastrarNovoPedido()
+        {
+            throw new NotImplementedException();
         }
 
         private void CarregarDados()
@@ -27,6 +35,20 @@ namespace ProjetoCadastros.Interface.ViewModel
             ListaPessoas = ObterListaPessoas();
             ListaProdutos = ObterListaProdutos();
             //ListaPedidos = ObterListaPedidos();
+        }
+
+        private void CadastrarNovoProduto()
+        {
+            var formCadastrarProduto= new TelaCadastroProduto();
+
+            formCadastrarProduto.ShowDialog();
+        }
+
+        private void CadastrarNovaPessoa()
+        {
+            var formCadastrarPessoa = new TelaCadastroPessoa();
+
+            formCadastrarPessoa.ShowDialog();
         }
 
         public List<PessoaDto> ObterListaPessoas()
@@ -131,13 +153,6 @@ namespace ProjetoCadastros.Interface.ViewModel
                 Valor = 199.90
             }
         };
-        }
-
-        private void CadastrarNovaPessoa()
-        {            
-            var formCadastrarPessoa = new TelaCadastroPessoa();
-
-            formCadastrarPessoa.ShowDialog();
-        }        
+        }             
     }
 }

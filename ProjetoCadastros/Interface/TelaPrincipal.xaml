@@ -7,14 +7,11 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Bem vindo" Height="450" Width="800">
-    
-    <Grid>
-        
 
+    <Grid>
         <TabControl Grid.ColumnSpan="2">
             <TabItem Header="Clientes">
                 <Grid>
-
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -51,9 +48,7 @@
                             <DataGridTextColumn Header="Endereço"
                                                 IsReadOnly="True"
                                                 Binding="{Binding Endereco}"
-                                                Width="500"/>
-
-
+                                                Width="580"/>
                         </DataGrid.Columns>
                     </DataGrid>
 
@@ -70,67 +65,107 @@
             </TabItem>
 
             <TabItem Header="Produtos">
-                <DataGrid ItemsSource="{Binding Path=ListaProdutos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                          AutoGenerateColumns="False"
-                          CanUserAddRows="False" 
-                          CanUserDeleteRows="False" 
-                          CanUserReorderColumns="True" 
-                          CanUserResizeColumns="True" 
-                          CanUserResizeRows="False" 
-                          CanUserSortColumns="True" 
-                          HorizontalGridLinesBrush="Transparent" 
-                          VerticalGridLinesBrush="Transparent" 
-                          AlternatingRowBackground="WhiteSmoke">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id"
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <DataGrid ItemsSource="{Binding Path=ListaProdutos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                              Grid.ColumnSpan="2"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False" 
+                              CanUserDeleteRows="False" 
+                              CanUserReorderColumns="True" 
+                              CanUserResizeColumns="True" 
+                              CanUserResizeRows="False" 
+                              CanUserSortColumns="True" 
+                              HorizontalGridLinesBrush="Transparent" 
+                              VerticalGridLinesBrush="Transparent" 
+                              AlternatingRowBackground="WhiteSmoke">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id"
                                                     IsReadOnly="True"
                                                     Binding="{Binding IdProduto}" />
-                        <DataGridTextColumn Header="Nome"
+                            <DataGridTextColumn Header="Nome"
                                                     IsReadOnly="True"
                                                     Binding="{Binding NomeProduto}" />
-                        <DataGridTextColumn Header="Código"
+                            <DataGridTextColumn Header="Código"
                                                     IsReadOnly="True"
                                                     Binding="{Binding Codigo}" />
-                        <DataGridTextColumn Header="Valor"
+                            <DataGridTextColumn Header="Valor"
                                                     IsReadOnly="True"
                                                     Binding="{Binding Valor}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
 
-
-                    </DataGrid.Columns>
-                </DataGrid>
+                    <Button Grid.Column="2"
+                            Grid.Row="2"
+                            Content="Cadatrar produto"
+                            Height="50"
+                            Width="100"
+                            Command="{Binding [CadastrarNovoProduto]}" >
+                    </Button>
+                </Grid>
+                
             </TabItem>
 
             <TabItem Header="Pedidos">
-                <DataGrid ItemsSource="{Binding Path=ListaPedidos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                          AutoGenerateColumns="False"
-                          CanUserAddRows="False" 
-                          CanUserDeleteRows="False" 
-                          CanUserReorderColumns="True" 
-                          CanUserResizeColumns="True" 
-                          CanUserResizeRows="False" 
-                          CanUserSortColumns="True" 
-                          HorizontalGridLinesBrush="Transparent" 
-                          VerticalGridLinesBrush="Transparent" 
-                          AlternatingRowBackground="WhiteSmoke">
+                <Grid>
 
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id"
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                                        
+                    <DataGrid ItemsSource="{Binding Path=ListaPedidos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                              Grid.ColumnSpan="2"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False" 
+                              CanUserDeleteRows="False" 
+                              CanUserReorderColumns="True" 
+                              CanUserResizeColumns="True" 
+                              CanUserResizeRows="False" 
+                              CanUserSortColumns="True" 
+                              HorizontalGridLinesBrush="Transparent" 
+                              VerticalGridLinesBrush="Transparent" 
+                              AlternatingRowBackground="WhiteSmoke">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id"
                                                     IsReadOnly="True"
                                                     Binding="{Binding IdPessoa}" />
-                        <DataGridTextColumn Header="Nome"
+                            <DataGridTextColumn Header="Nome"
                                                     IsReadOnly="True"
                                                     Binding="{Binding NomePessoa}" />
-                        <DataGridTextColumn Header="CPF"
+                            <DataGridTextColumn Header="CPF"
                                                     IsReadOnly="True"
                                                     Binding="{Binding Cpf}" />
-                        <DataGridTextColumn Header="Endereço"
+                            <DataGridTextColumn Header="Endereço"
                                                     IsReadOnly="True"
                                                     Binding="{Binding Endereco}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
 
-
-                    </DataGrid.Columns>
-                </DataGrid>
+                    <Button Grid.Column="2"
+                            Grid.Row="2"
+                            Content="Novo pedido"
+                            Height="50"
+                            Width="100"
+                            Command="{Binding [CadastrarNovoPedido]}" >
+                    </Button>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
